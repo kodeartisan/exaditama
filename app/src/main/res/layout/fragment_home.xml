@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+           <android.support.design.widget.AppBarLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+               app:elevation="6dp">
+                   <android.support.design.widget.CollapsingToolbarLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:fitsSystemWindows="true"
+                       app:contentScrim="?attr/colorPrimary"
+                       app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="280dp"
+                               android:fitsSystemWindows="true"
+                               android:gravity="center_horizontal"
+                               android:orientation="horizontal"
+                               android:paddingTop="80dp">
+
+                           </LinearLayout>
+
+                           <android.support.v7.widget.Toolbar
+                               android:id="@+id/toolbar"
+                               android:layout_width="match_parent"
+                               android:layout_height="?attr/actionBarSize"
+                               android:background="?attr/colorPrimary"
+                               app:layout_collapseMode="pin"
+                               app:popupTheme="@style/AppTheme.PopupOverlay">
+                                   <RelativeLayout
+
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent">
+                                           <TextView
+                                               android:id="@+id/title"
+                                               android:layout_centerInParent="true"
+                                               android:foregroundGravity="center"
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:layout_marginLeft="-10dp"
+                                               android:textColor="@android:color/white"
+                                               android:text="INFO \u0026 ENGAGEMENT"
+                                               android:textSize="18sp" />
+
+
+
+                                   </RelativeLayout>
+
+
+
+                           </android.support.v7.widget.Toolbar>
+
+                   </android.support.design.widget.CollapsingToolbarLayout>
+
+
+           </android.support.design.widget.AppBarLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="60dp">
+
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp">
+
+                                <RelativeLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp">
+
+                                        <ImageView
+                                            android:id="@+id/imageMain"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:scaleType="centerCrop"
+                                            />
+                                        <RelativeLayout
+                                            android:padding="4dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:textColor="@android:color/white"
+                                                    android:id="@+id/text_offer"
+                                                    android:text="LIMITED TIME OFFER"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content" />
+                                                <TextView
+                                                    android:textColor="@android:color/white"
+                                                    android:layout_below="@id/text_offer"
+                                                    android:textSize="24sp"
+                                                    android:text="Free Holland Cookies"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                        <TextView
+                                                            android:textColor="@android:color/white"
+                                                            android:text="McCafe, Buah Batu"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content" />
+                                                        <TextView
+                                                            android:textColor="@android:color/white"
+                                                            android:text="November 4th 2017"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content" />
+                                                </LinearLayout>
+                                        </RelativeLayout>
+
+                                </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerview_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_marginTop="16dp"
+                            android:layout_below="@+id/recyclerview_horizontal"
+                            android:id="@+id/recyclerview_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp" />
+
+                </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,14 @@
+ext{
+
+    minSdkVersion = 16
+    targetSdkVersion = 26
+    compileSdkVersion = 26
+    buildToolsVersion = '3.0.1'
+
+    supportLibraryVersion='27.0.2'
+    glideVersion='4.4.0'
+    butterknifeVersion='8.8.1'
+    rxandroidVersion='2.0.1'
+    rxjavaVersion='2.1.8'
+    daggerVersion='2.14.1'
+}
